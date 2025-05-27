@@ -1,0 +1,82 @@
+   @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: 'Orbitron', sans-serif;
+        background: #ffffff;
+        color: #030303;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        background: linear-gradient(90deg, #1e1e2f, #111120);
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+        position: relative;
+        z-index: 10;
+    }
+
+    nav a {
+        color: #0ff;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 16px;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+    nav a::before {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        background-color: #0ff;
+        bottom: -4px;
+        left: 0;
+        transition: 0.3s;
+    }
+
+    nav a:hover::before {
+        width: 100%;
+    }
+
+    nav a:hover {
+        color: #fff;
+        text-shadow: 0 0 10px #0ff;
+    }
+
+    .nav-left,
+    .nav-right {
+        display: flex;
+        align-items: center;
+    }
+
+    .bienvenida {
+        color: #0ff;
+        margin-right: 15px;
+        font-style: italic;
+        font-size: 14px;
+        text-shadow: 0 0 5px #0ff;
+    }
+
+    .logo {
+        font-size: 20px;
+        color: #fff;
+        text-shadow: 0 0 10px #0ff;
+        font-weight: bold;
+    }
+
+    .nav-right a:last-child {
+        margin-right: 0;
+    }
+
+
+    nav a.active {
+        border-bottom: 2px solid #0ff;
+    }
